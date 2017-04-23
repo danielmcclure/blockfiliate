@@ -7,7 +7,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>Blockfiliate</title>
 
@@ -115,14 +114,19 @@
 
       <div class="jumbotron">
         <h1>Complete Purchase</h1>
-        <p><script>var aid = getAllUrlParams().aid; document.write(getAllUrlParams().aid);</script></p>
         <p><script>
-        	var aid = getAllUrlParams().aid;
+                if (!getAllUrlParams().aid) {
+    		var aid = "0xe767aeb31daaf66366999f72fb5de2ceea76c277";
+		} else {
+    		var aid = getAllUrlParams().aid;
+		}
+        document.write(aid);</script></p>
+        <p><script>
         	var qrco = '<img src="http://chart.googleapis.com/chart?chs=200x200&cht=qr&chld=H|0&chl=';
         	var qrcc = '" alt="Buy Now With Ethereum" />';
 
         	document.write(qrco);
-        	document.write(getAllUrlParams().aid);
+        	document.write(aid);
         	document.write(qrcc);
         </script></p>
 
@@ -161,7 +165,7 @@
     function send() {
       web3.eth.sendTransaction({
         from: web3.eth.coinbase,
-        to: getAllUrlParams().aid,
+        to: aid,
         value: web3.toWei(document.getElementById("amount").value, 'ether')
       }, function(error, result) {
         if (!error) {
