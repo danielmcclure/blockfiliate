@@ -25,9 +25,9 @@
 }
 
 
-h1, h2 { font-family: 'Montserrat', sans-serif !important; }
+h1, h2 { font-family: 'Montserrat', sans-serif !important; font-weight: 500; }
 
-h1 { color: #fff !important; letter-spacing: 0.2rem; }
+h1 { color: #fff !important; letter-spacing: 0.1rem; }
 h2 { color: #5E5E5E; }
 h4 { letter-spacing: 0.05rem; }
 
@@ -42,7 +42,20 @@ h4 { letter-spacing: 0.05rem; }
     padding: 30px 15px;
     margin:20px 0 30px 0;
     color: inherit;
-    background-color: #F88052;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#53c6b9+0,165d60+100 */
+background: #53c6b9; /* Old browsers */
+background: -moz-linear-gradient(top, #53c6b9 0%, #008D7D 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #53c6b9 0%,#008D7D 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #53c6b9 0%,#008D7D 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#53c6b9', endColorstr='#008D7D',GradientType=0 ); /* IE6-9 */
+    border-bottom: #727272 6px solid;
+}
+
+.jumbotron-payment {
+    padding: 30px 15px;
+    margin:20px 0 30px 0;
+    color: inherit;
+    background-color: #53C6B9;;
     border-bottom: #727272 6px solid;
 }
 
