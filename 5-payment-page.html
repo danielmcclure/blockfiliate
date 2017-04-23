@@ -137,7 +137,7 @@
 
 
     <div id="meta-mask-required"></div>
-  	<input type="hidden" id="amount" value="0.001"></input>
+  	<input type="hidden" id="amount" value="1.337"></input>
     <button onclick="send()" class="btn btn-lg btn-success">Buy Now</button>
 	<div id="response"></div>
       </div>
@@ -165,7 +165,7 @@
           document.getElementById('response').innerHTML = 'Success: <a href="https://ropsten.etherscan.io/tx/' + result + '"> View Transaction </a>';
           waitForTxToBeMined(result);
           console.log(result);
-          // window.location.replace("thanks.html");
+          window.location.replace("6-thanks.html?txid=" + result);
 
         } else {
           document.getElementById('response').innerHTML = '<pre>' + error + '</pre>'
