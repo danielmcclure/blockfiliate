@@ -101,27 +101,32 @@
   <body>
 
     <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Blockfiliate</h3>
-      </div>
+      <nav class="navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/logo.png" /></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right" role="form">
 
-      <div class="jumbotron">
+      </nav>
+
+      <div class="jumbotron mt100px col-md-7">
         <h1>Complete Purchase</h1>
         <p><script>
                 if (!getAllUrlParams().aid) {
-    		var aid = "0xe767aeb31daaf66366999f72fb5de2ceea76c277";
+    		var aid = "Address: 0xe767aeb31daaf66366999f72fb5de2ceea76c277";
 		} else {
     		var aid = getAllUrlParams().aid;
 		}
         document.write(aid);</script></p>
-        <p><script>
+        <p class="qr-wrapper"><script>
         	var qrco = '<img src="http://chart.googleapis.com/chart?chs=200x200&cht=qr&chld=H|0&chl=';
         	var qrcc = '" alt="Buy Now With Ethereum" />';
 
@@ -130,28 +135,16 @@
         	document.write(qrcc);
         </script></p>
 
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
     <div id="meta-mask-required"></div>
   	<input type="hidden" id="amount" value="0.001"></input>
-    <button onclick="send()" class="btn btn-lg btn-success">Donate to the Author</button>
+    <button onclick="send()" class="btn btn-lg btn-success">Buy Now</button>
 	<div id="response"></div>
       </div>
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-        </div>
-
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-        </div>
-      </div>
-
+    <br /><br /></div>
       <footer class="footer">
-        <p>&copy; 2017 Blockfiliate</p>
+
       </footer>
 
     </div> <!-- /container -->
