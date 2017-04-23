@@ -171,3 +171,8 @@ label {
 /*  margin: 0 auto;
   text-align: center; */
 }
+
+
+.imgsize {
+  max-width: 100%;
+}
