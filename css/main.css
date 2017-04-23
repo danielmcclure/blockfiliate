@@ -1,0 +1,123 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+/* color: #660393;  purple - primary */
+
+.white {
+  color: #fff;
+}
+
+.blue {
+  color: #53C6B9;
+}
+
+.mt40px {
+  margin-top: 40px;
+}
+
+.mt20px {
+  margin-top: 20px;
+}
+
+
+h1, h2 { font-family: 'Montserrat', sans-serif !important; }
+
+h1 { color: #fff !important; letter-spacing: 0.2rem; }
+h2 { color: #5E5E5E; }
+h4 { letter-spacing: 0.05rem; }
+
+
+.navbar-fixed-top, .navbar-header, .navbar {
+  background-color: #5E5E5E;
+  margin-bottom: 20px;
+  height: 80px;
+}
+
+.jumbotron {
+    padding: 30px 15px;
+    margin:20px 0 30px 0;
+    color: inherit;
+    background-color: #F88052;
+    border-bottom: #727272 6px solid;
+}
+
+@media screen and (min-width: 768px) {
+.jumbotron h1{
+    font-size: 63px;
+    margin-top: 0 !important;
+}
+}
+
+#merchantCodeSnippet {
+  margin: 0 0 0 0;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: #E8E8E8;
+  border-color: #53C6B9;
+   box-shadow: 0 0 10px #53C6B9;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #53C6B9;
+    background-color: transparent;
+    border-radius: 4px;
+     font-style: italic;
+}
+
+footer {
+  height: 200px;
+    border-top: #727272 6px solid;
+    background-color: #727272;
+    margin-top: 50px;
+}
+
+.btn-primary {
+
+
+    background-image: linear-gradient(to bottom, #53C6B9 0%, #53C6B9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff265a88', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background-repeat: repeat-x;
+    border-color: #53C6B9;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color:  #28A395;
+    border-color: #28A395; /*set the color you want here*/
+}
+
+
+.icon {
+color: #53C6B9;
+padding-right: 5px !important;
+}
+
+.callout {
+  font-size: 3rem;
+  color: #53C6B9;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: normal !important;
+}
+
+
+.caption-code {
+  color: grey;
+  margin-bottom: 40px;
+}
+
+.clip {
+  font-size: 3rem;
+}

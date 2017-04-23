@@ -1,0 +1,197 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Blockfiliate</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://use.fontawesome.com/aec259bc60.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <style>
+            body {
+                padding-top: 50px;
+
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+    <nav class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="img/logo.png" /></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" role="form">
+            <!--<div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div>/.navbar-collapse
+      </div>-->
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h2>Digital Merchant</h2>
+        <h1>Let's Get Started</h1>
+        <h4 class="white">ID: 28509174820</h4>
+        <!--<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-6 mt40px">
+          <h2><i class="fa fa-handshake-o icon" aria-hidden="true"></i> Commission</h2>
+          <p>Please choose your commission percentage you wish to give to your promoters. 20% is standard.</p>
+
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="20%" id="merchantSetCommissionRate" >
+            </div>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6 mt40px">
+          <h2><i class="fa fa-inbox icon" aria-hidden="true"></i> Wallet Receiving Address</h2>
+          <p>This is where we send your payments when you make a sale. You can
+change this later.</p>
+
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="0x4ea19c0327f19cc3609b69ecb86360c2ba7a6fbe5f0f53d" id="merchantWallettId" >
+            </div>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6 mt40px">
+          <h2><i class="fa fa-envelope-o icon" aria-hidden="true"></i> Email Address</h2>
+          <p>Of course, we want to keep in touch.</p>
+
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="yourname@youremail.com" id="merchantEmailAddress" >
+            </div>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6 mt40px">
+          <h2><i class="fa fa-wrench icon" aria-hidden="true"></i> Resource Page</h2>
+          <p>This is where your promoters go to learn about your products, program, and creative.</p>
+
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="http://www.yoursite.com/promoter-resource" id="merchantResourcePage" >
+            </div>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6 mt40px">
+          <h2><i class="fa fa-bolt icon" aria-hidden="true"></i> Creative Assets</h2>
+          <p>Upload a creative asset that your promotes can use on their site.</p>
+
+
+            <div class="form-group">
+  <input type="file" class="form-control-file" id="merchantCreativeAsset" >
+</div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mt40px">
+          <h2><i class="fa fa-share icon" aria-hidden="true"></i> Promoter Payout</h2>
+          <p>How many sales until we pay the promoter?<br />
+            At least 2 referrals by a promoter is recommended before we pay their commission.</p>
+
+
+            <div class="form-group">
+              <select class="form-control" id="merchantPayoutToPromoter">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+  </select>
+</div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mt40px">
+
+             <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row mt20px">
+        <div class="col-md-6 mt40px">
+<h2><i class="fa fa-code icon" aria-hidden="true"></i> Embed Code</h2>
+        <p>
+          Here’s the snippet code to place in your X…
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+      <div id="merchantCodeSnippet">
+         <code>
+           &lt;div id=“#bf-wrapper”&gt;<br />
+         &lt;a href=“#oremIpsum”&gt;<br />
+			&lt;label for=“title”>Product&lt;/label&gt;<br />
+         &lt;input type="text" name="name" id="name" value=“”&gt;
+	   </a>
+    </div>
+  </code>
+      </div>
+
+    </div>  <i class="fa fa-clipboard icon clip" aria-hidden="true"></i> <span class="caption-code">Copy to Clipboard</span>
+
+  </div>
+
+      <footer>
+
+      </footer>
+    </div> <!-- /container -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
