@@ -1,5 +1,3 @@
-pragma solidity ^0.4.8;
-
 contract AffiliateRegistrar {
     mapping(address => Affiliate) public affiliateContracts;
     address[] public affiliateContractsArray;
@@ -21,57 +19,36 @@ contract AffiliateRegistrar {
 }
 
 contract Affiliate {
-    mapping(address => uint256) public affiliateVolume;
-    mapping(address => uint256) public affiliateFunds;
+    uint256 public affiliateVolume;
     
     address public owner;
-    address public registrar;
-    address[] public affiliates;
+    address public affiliateAddress;
     bytes public description;
     
-    uint256[] volumeThreshold;
-    uint256[] volumeAffiliatePercentage;
+    uint256[] public volumeThreshold;
+    uint256[] public volumeAffiliatePercentage;
     
-   function Affiliate(address _owner) {
-        registrar = msg.sender;
-        owner = _owner;
-        volumeThreshold = [1,10,100,1000];
+    function Affiliate(address _affiliateAddress) {
+        owner = msg.sender;
+        affiliateAddress = _affiliateAddress;
+        volumeThreshold = [1,5,100,1000];
         volumeAffiliatePercentage = [1, 2, 3,5];
         description = "Affiliate fund description";
     }
 
-   function getAffiliatePercentage(address affiliateAddress) constant returns (uint) {
-        uint256 volume = affiliateVolume[affiliateAddress];
-        
-       for (uint i = 0; i < volumeThreshold.length; i++) {
-            if (volume >= volumeThreshold[i]) return volumeAffiliatePercentage[i];
+   function getAffiliatePercentage() constant returns (uint) {
+        for (uint i = 0; i < volumeThreshold.length; i++) {
+            if (affiliateVolume < volumeThreshold[i]) return volumeAffiliatePercentage[i];
         }
         
-       return volumeAffiliatePercentage[0]; //TODO should value be 0?
+        return volumeAffiliatePercentage[volumeThreshold.length - 1];
     }
     
-   function acceptPayment(address affiliateAddress) payable returns (bool){
-       affiliateVolume[affiliateAddress] += msg.value;
-
-       uint256 affiliateFee = msg.value * getAffiliatePercentage(affiliateAddress) / 100;
-       // affiliateFunds[affiliateAddress] += affiliateFee;
-        
-       owner.send(msg.value - affiliateFee);
-        
-       //TODO add time delay
-       affiliateAddress.send(affiliateFee);
-       // affiliateFunds[affiliateAddress] = 0;
-        
-       return true;
-    }
-    
-   function getAffiliateVolume() constant returns (uint256[]) {
-        uint256[] memory affiliateVolumeResult = new uint256[](affiliates.length);
-        
-       for (uint i = 0; i < affiliates.length; i++) {
-            affiliateVolumeResult[i] = affiliateVolume[affiliates[i]];
-        }
-        
-       return (affiliateVolumeResult);
+   function pay() payable {
+        affiliateVolume += msg.value;
+        uint256 affiliateFee = msg.value * getAffiliatePercentage() / 100;
+       
+        if (!owner.send(msg.value - affiliateFee)) throw;
+        if (!affiliateAddress.send(affiliateFee)) throw;
     }
 }
