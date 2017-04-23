@@ -12,7 +12,8 @@
     <title>Blockfiliate</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -29,7 +30,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
     <script>
     	function getAllUrlParams(url) {
 
@@ -93,7 +94,7 @@
   return obj;
 }
     </script>
-    
+
 
 
   </head>
@@ -116,17 +117,17 @@
         <h1>Complete Purchase</h1>
         <p><script>var aid = getAllUrlParams().aid; document.write(getAllUrlParams().aid);</script></p>
         <p><script>
-        	var aid = getAllUrlParams().aid; 
-        	var qrco = '<img src="http://chart.googleapis.com/chart?chs=200x200&cht=qr&chld=H|0&chl='; 
-        	var qrcc = '" alt="Buy Now With Ethereum" />'; 
-        	
-        	document.write(qrco); 
-        	document.write(getAllUrlParams().aid); 
+        	var aid = getAllUrlParams().aid;
+        	var qrco = '<img src="http://chart.googleapis.com/chart?chs=200x200&cht=qr&chld=H|0&chl=';
+        	var qrcc = '" alt="Buy Now With Ethereum" />';
+
+        	document.write(qrco);
+        	document.write(getAllUrlParams().aid);
         	document.write(qrcc);
         </script></p>
-        
+
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        
+
     <div id="meta-mask-required"></div>
   	<input type="hidden" id="amount" value="0.001"></input>
     <button onclick="send()" class="btn btn-lg btn-success">Donate to the Author</button>
@@ -174,18 +175,18 @@
         }
       })
     }
-    
+
 	async function waitForTxToBeMined (txHash) {
-  	
+
   		let txReceipt
-  		
+
     		try {
       			txReceipt = await web3.eth.getTransactionReceipt(txHash, function(error, result){console.log(result)})
     		} catch (err) {
       			console.log(err);
     		}
 
-  		
+
   		console.log("Success");
 	}
 
